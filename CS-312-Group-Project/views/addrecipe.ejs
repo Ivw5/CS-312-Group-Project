@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Share a Recipe | Stir Social</title>
+  <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Stir Social home"><span class="brand-mark" aria-hidden="true">s.</span>stir social<span class="brand-dot">.</span></a>
+    <nav aria-label="Main navigation">
+      <a class="nav-link" href="/">Home</a>
+      <a class="nav-link" href="/recipes">Browse recipes</a>
+      <a class="nav-link" href="/profile">My profile</a>
+    </nav>
+    <a class="button button-small" href="/addrecipe" aria-current="page">+ Share a recipe</a>
+  </header>
+  <main class="add-recipe-page">
+    <a class="back-link" href="/">← Back to home</a>
+    <section class="recipe-intro" aria-labelledby="page-title">
+      <p class="eyebrow">FROM YOUR KITCHEN TO OURS</p>
+      <h1 id="page-title">A little love.<br>A recipe worth <em>sharing.</em></h1>
+      <p>Family favorite or happy accident? Give your next kitchen discovery a home.</p>
+    </section>
+    <form class="recipe-form" aria-describedby="form-status">
+      <div class="form-heading"><div><h2>Add your recipe</h2><p>Start with the basics. Make it your own.</p></div><span class="form-required">* Required fields</span></div>
+      <div class="recipe-form-grid">
+        <div class="recipe-form-main">
+          <div class="recipe-field"><label for="recipe-name">Recipe name <span>*</span></label><input id="recipe-name" name="title" type="text" placeholder="e.g. Grandma's Sunday tomato pasta" required maxlength="150" autocomplete="off"></div>
+          <div class="recipe-field"><label for="ingredients">Ingredients <span>*</span></label><p class="field-hint" id="ingredients-hint">One ingredient per line, including quantities.</p><textarea id="ingredients" name="ingredients" rows="7" required aria-describedby="ingredients-hint" placeholder="200 g pasta&#10;2 tbsp olive oil&#10;3 ripe tomatoes&#10;A handful of fresh basil"></textarea></div>
+          <div class="recipe-field"><label for="instructions">Instructions <span>*</span></label><p class="field-hint" id="instructions-hint">Walk us through it, one step per line.</p><textarea id="instructions" name="instructions" rows="9" required aria-describedby="instructions-hint" placeholder="1. Bring a pot of salted water to a boil.&#10;2. Warm the olive oil in a pan...&#10;3. Bring everything together and enjoy."></textarea></div>
+        </div>
+        <div class="recipe-form-details">
+          <div class="recipe-field"><label for="cuisine">Cuisine <span>*</span></label><input id="cuisine" name="cuisine" type="text" required maxlength="80" placeholder="e.g. Italian, Mexican, Indian"></div>
+          <div class="recipe-field"><label for="cooking-time">Cooking time <span>*</span></label><div class="time-input"><input id="cooking-time" name="cooking_time" type="number" min="1" max="10080" step="1" required placeholder="30" aria-describedby="time-unit"><span id="time-unit">minutes</span></div></div>
+          <fieldset class="difficulty-field"><legend>Difficulty <span>*</span></legend><div class="difficulty-options"><label><input type="radio" name="difficulty" value="easy" required> Easy</label><label><input type="radio" name="difficulty" value="medium"> Medium</label><label><input type="radio" name="difficulty" value="hard"> Hard</label></div></fieldset>
+          <div class="recipe-field"><label for="recipe-photo">Recipe photo <span class="optional">(coming soon)</span></label><div class="photo-placeholder"><span class="photo-symbol" aria-hidden="true">↥</span><strong>A little sneak peek</strong><p>Photo uploads will be available<br>when recipe saving is connected.</p><input id="recipe-photo" type="file" name="photo" accept="image/jpeg,image/png,image/webp" disabled aria-label="Recipe photo upload, coming soon"></div></div>
+          <aside class="kitchen-tip"><span aria-hidden="true">✳</span><div><h3>A little kitchen wisdom</h3><p>The best recipes include the little details: a pinch, a swap, or how to know when it's just right.</p></div></aside>
+        </div>
+      </div>
+      <div class="recipe-form-bottom"><p id="form-status" role="status">Design preview · Recipe saving isn't connected yet.</p><div class="form-actions"><a class="cancel-link" href="/">Cancel</a><button class="button" type="button" disabled>Share recipe <span aria-hidden="true">↗</span></button></div></div>
+    </form>
+    <p class="recipe-closing">Good food tastes even better when it's shared.</p>
+  </main>
+  <footer><a class="footer-brand" href="/">stir social.</a><p>A little community. A lot of good food.</p><span>Made for sharing.</span></footer>
+</body>
+</html>

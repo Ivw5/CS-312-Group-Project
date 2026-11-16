@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#254b39">
+  <title>Stir Social | A little inspiration for your next meal</title>
+  <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Stir Social home"><span class="brand-mark" aria-hidden="true">s.</span>stir social<span class="brand-dot">.</span></a>
+    <nav aria-label="Main navigation">
+      <a class="nav-link active" href="/" aria-current="page">Home</a>
+      <a class="nav-link" href="#recipes">Browse recipes</a>
+      <a class="nav-link" href="/profile">My profile</a>
+    </nav>
+    <a class="button button-small" href="/addrecipe"><span aria-hidden="true">+</span> Share a recipe</a>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> GOOD FOOD. BETTER TOGETHER.</p>
+        <h1 id="hero-title">A little inspiration.<br>A lot of <em>flavor.</em></h1>
+        <p class="hero-description">Find your next favorite meal, share your kitchen discoveries, and pull up a chair. There's always room for one more.</p>
+        <form class="search" action="/recipes" method="GET" role="search">
+          <label class="sr-only" for="recipe-search">Search recipes or ingredients</label>
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>
+          <input id="recipe-search" name="q" type="search" placeholder="A recipe, an ingredient, a craving..." maxlength="150">
+          <button class="button" type="submit">Find recipes <span aria-hidden="true">↗</span></button>
+        </form>
+        <p class="search-hint">A little nudge: <a href="/recipes?q=pasta">pasta</a>, <a href="/recipes?q=vegetarian">something veggie</a>, <a href="/recipes?q=quick">a quick dinner</a></p>
+      </div>
+      <div class="hero-art" role="img" aria-label="Illustration of a colorful bowl of vegetables, tomatoes, and greens">
+        <span class="art-note">made with a little love</span>
+        <div class="plate"><div class="food"><span class="greens green-one"></span><span class="greens green-two"></span><span class="greens green-three"></span><span class="grain grain-one"></span><span class="grain grain-two"></span><span class="tomato tomato-one"></span><span class="tomato tomato-two"></span><span class="tomato tomato-three"></span><span class="avocado"></span><span class="herb herb-one"></span><span class="herb herb-two"></span></div></div>
+        <span class="art-caption">Fresh ideas, served daily <span aria-hidden="true">✳</span></span>
+      </div>
+    </section>
+
+    <section class="discovery" id="recipes" aria-labelledby="recipes-title">
+      <div class="section-heading"><div><p class="eyebrow">YOUR NEXT “I HAVE TO MAKE THIS”</p><h2 id="recipes-title">What's cooking?</h2></div><a class="text-link" href="/recipes">Explore all recipes <span aria-hidden="true">↗</span></a></div>
+      <div class="categories" aria-label="Explore recipe categories">
+        <a class="category selected" href="/recipes">All recipes</a><a class="category" href="/recipes?mealType=breakfast">Breakfast</a><a class="category" href="/recipes?mealType=lunch">Lunch</a><a class="category" href="/recipes?mealType=dinner">Dinner</a><a class="category" href="/recipes?dietary=vegetarian">Vegetarian</a><a class="category" href="/recipes?mealType=dessert">Something sweet</a>
+      </div>
+      <p class="preview-note">A taste of what's to come · Sample recipes</p>
+      <div class="recipe-grid">
+        <article class="recipe-card"><div class="recipe-art pasta-art" aria-hidden="true"><span class="food-emoji">🍝</span><span class="recipe-tag">WEEKNIGHT FAVORITE</span></div><div class="recipe-content"><p class="recipe-category">ITALIAN · DINNER</p><h3>Sunday kind of tomato pasta</h3><p>A cozy classic with tomatoes, fresh basil, and a little parmesan.</p><div class="recipe-meta"><span>25 min</span><span>Easy</span><span class="sample-label">Sample recipe</span></div></div></article>
+        <article class="recipe-card"><div class="recipe-art salad-art" aria-hidden="true"><span class="food-emoji">🥗</span><span class="recipe-tag">FRESH & COLORFUL</span></div><div class="recipe-content"><p class="recipe-category">MEDITERRANEAN · VEGETARIAN</p><h3>The feel-good harvest bowl</h3><p>Crunchy greens, hearty grains, and a bright lemon dressing.</p><div class="recipe-meta"><span>20 min</span><span>Easy</span><span class="sample-label">Sample recipe</span></div></div></article>
+        <article class="recipe-card"><div class="recipe-art pancake-art" aria-hidden="true"><span class="food-emoji">🥞</span><span class="recipe-tag">SLOW MORNING ENERGY</span></div><div class="recipe-content"><p class="recipe-category">AMERICAN · BREAKFAST</p><h3>Stay-in-your-pajamas pancakes</h3><p>Fluffy stacks, a handful of berries, and a drizzle of maple syrup.</p><div class="recipe-meta"><span>30 min</span><span>Easy</span><span class="sample-label">Sample recipe</span></div></div></article>
+      </div>
+    </section>
+    <section class="share-banner" aria-labelledby="share-title"><div><p class="eyebrow">FROM YOUR KITCHEN TO OURS</p><h2 id="share-title">Good recipes are meant to be shared.</h2><p>Your family favorite could become someone else's new tradition.</p></div><a class="button" href="/addrecipe">Share your recipe <span aria-hidden="true">↗</span></a></section>
+  </main>
+  <footer><a class="footer-brand" href="/">stir social.</a><p>A little community. A lot of good food.</p><span>Made for sharing.</span></footer>
+</body>
+</html>
